@@ -58,13 +58,13 @@
 							"    pm.expect(person).to.have.property(\"name\")\r",
 							"});\r",
 							"\r",
-							"// Проверка целого элемента (в {} целый объект)\r",
+							"// Проверка объекта с объектом - целого элемента (в {} целый объект)\r",
 							"pm.test(\"Test_5 Person\", function () {\r",
 							"    pm.expect(person).to.deep.include({\"salary\": 1500})\r",
 							"});\r",
 							"\r",
 							"\r",
-							"// Проверка каких-то данных в массиве (в [] нужно указать номер элемента массива - 0,1 и т.д.)\r",
+							"// Проверка каких-то данных в массиве person.family.children (в [] нужно указать номер элемента массива - 0,1 и т.д.)\r",
 							"pm.test(\"Test_6 Person\", function () {\r",
 							"    pm.expect(person.family.children[1]).to.deep.include(12)\r",
 							"});\r",
@@ -74,7 +74,7 @@
 							"    pm.expect(person.family.children[0]).to.be.a(\"Array\")\r",
 							"});\r",
 							"// Проверка на тип данных (в () указываем искомый тип данных - Array, Number, String). К примеру, \r",
-							"// \"name\": \"Vadim\"  чтобы проверить в параметре name value является строкой \r",
+							"// \"name\": \"Vadim\"  чтобы проверить в параметре name значение является строкой \r",
 							"pm.test(\"Test_7.1 Person\", function () {\r",
 							"    pm.expect(person.name).to.be.a(\"String\")\r",
 							"});\r",
@@ -130,6 +130,144 @@
 					"port": "5005",
 					"path": [
 						"get_test_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "first",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/first",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"first"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "first Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/get_method?name=Vadim&age=32",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Vadim"
+						},
+						{
+							"key": "age",
+							"value": "32"
+						},
+						{
+							"key": "salary",
+							"value": "2000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "32",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "2000",
+							"type": "default"
+						},
+						{
+							"key": "name",
+							"value": "Alex",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/user_info_2",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"user_info_2"
+					],
+					"query": [
+						{
+							"key": "salary",
+							"value": "2000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5007_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5007/",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5007",
+					"path": [
+						""
 					]
 				}
 			},
