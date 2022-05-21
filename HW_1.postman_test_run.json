@@ -1,0 +1,237 @@
+{
+	"id": "678f2cdc-7093-4fc9-8b1a-1f9c5ea6d313",
+	"name": "HW_1",
+	"timestamp": "2022-05-21T21:49:14.989Z",
+	"collection_id": "0-86293e5b-529c-4eec-ad3f-dec5101b9a3a",
+	"folder_id": 0,
+	"environment_id": "4ee8287e-05af-490c-9d28-2596837216e2",
+	"totalPass": 3,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "15d245a4-450f-4aa6-ae84-a4f8eef421a9",
+			"name": "EP_1",
+			"url": "http://162.55.220.72:5005/get_method?name=Elena&age=30",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				138
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b4175f67-8a96-4b81-b230-d3dd40687c79",
+			"name": "EP_3",
+			"url": "http://162.55.220.72:5005/object_info_1?name=Elena&age=30&weight=50",
+			"time": 101,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				101
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "311b378a-e2a8-49e7-9d97-da9e69738123",
+			"name": "EP_4",
+			"url": "http://162.55.220.72:5005/object_info_2?name=Elena&age=30&salary=2000",
+			"time": 87,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				87
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8b4220bb-af5e-45a2-97ca-72d35a4b266b",
+			"name": "EP_5",
+			"url": "http://162.55.220.72:5005/object_info_3?name=Elena&age=30&salary=2000",
+			"time": 123,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				123
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "516ad065-2016-40a9-812f-a72547be9302",
+			"name": "EP_6",
+			"url": "http://162.55.220.72:5005/object_info_4?name=Elena&age=30&salary=2000",
+			"time": 93,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				93
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "05dfcd35-9227-458b-99d3-4c17b7d88dfd",
+			"name": "EP_2",
+			"url": "http://162.55.220.72:5005/user_info_3",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				138
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "54665a87-ddef-4a2d-928c-c3a78fb84c39",
+			"name": "EP_7",
+			"url": "http://162.55.220.72:5005/user_info_2",
+			"time": 121,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				121
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "19e3c1d9-be73-4df5-acb0-67ae87fa1411",
+			"name": "login/token",
+			"url": "http://162.55.220.72:5005/login",
+			"time": 153,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				153
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e7117ea0-c61d-4856-9b34-f5d213f28ca3",
+			"name": "user_info",
+			"url": "http://162.55.220.72:5005/user_info",
+			"time": 115,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"salary_check_12": true,
+				"age_check": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"salary_check_12": {
+					"pass": 1,
+					"fail": 0
+				},
+				"age_check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				115
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"salary_check_12": true,
+					"age_check": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1069,
+	"collection": {
+		"requests": [
+			{
+				"id": "15d245a4-450f-4aa6-ae84-a4f8eef421a9",
+				"method": "GET"
+			},
+			{
+				"id": "b4175f67-8a96-4b81-b230-d3dd40687c79",
+				"method": "GET"
+			},
+			{
+				"id": "311b378a-e2a8-49e7-9d97-da9e69738123",
+				"method": "GET"
+			},
+			{
+				"id": "8b4220bb-af5e-45a2-97ca-72d35a4b266b",
+				"method": "GET"
+			},
+			{
+				"id": "516ad065-2016-40a9-812f-a72547be9302",
+				"method": "GET"
+			},
+			{
+				"id": "05dfcd35-9227-458b-99d3-4c17b7d88dfd",
+				"method": "POST"
+			},
+			{
+				"id": "54665a87-ddef-4a2d-928c-c3a78fb84c39",
+				"method": "POST"
+			},
+			{
+				"id": "19e3c1d9-be73-4df5-acb0-67ae87fa1411",
+				"method": "POST"
+			},
+			{
+				"id": "e7117ea0-c61d-4856-9b34-f5d213f28ca3",
+				"method": "POST"
+			}
+		]
+	}
+}

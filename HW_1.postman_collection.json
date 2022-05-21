@@ -264,6 +264,153 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "login/token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"  let jsonData = pm.response.json();\r",
+							"  let user_token = jsonData.token\r",
+							"  pm.environment.set(\"token\", user_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "Elena",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "2000",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/login",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"// 1. СРАВНЕНИЕ ПО КЛЮЧУ qa_salary_after_12_months  \r",
+							"// Спарсили ответ в json\r",
+							"    let jsonData = pm.response.json();\r",
+							"\r",
+							"\r",
+							"// Спарсили запрос в json\r",
+							"    let req = JSON.parse(request.data)\r",
+							"    // Присвоили значению req_salary забранному значению из запроса <<--- по ключу salary\r",
+							"    let req_salary = req.salary\r",
+							"    let salary_check_12 = req.salary * 2.9\r",
+							"    // Присвоили значению salary_12 забранное напрямую из ответа <<---  \r",
+							"    let salary_12 = jsonData.qa_salary_after_12_months\r",
+							"    console.log(salary_check_12)\r",
+							"    console.log(salary_12)\r",
+							"  \r",
+							" \r",
+							"    console.log(\"reg_salary = \", req_salary)\r",
+							"// Сравниваем \r",
+							"pm.test(\"salary_check_12\", function () {\r",
+							"    pm.expect(salary_12).to.eql(salary_check_12);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"//2. СРАВНЕНИЕ ПО КЛЮЧУ u_age \r",
+							"\r",
+							"// Спарсили ответ в json\r",
+							"let jsonData2 = pm.response.json();\r",
+							"\r",
+							"// Спарсили запрос в json\r",
+							"let req2 = JSON.parse(request.data)\r",
+							"console.log(req2) \r",
+							"\r",
+							"// Присвоили значению age_request забранное значению из запроса <<--- по ключу age\r",
+							"let age_request = req2.age\r",
+							"console.log(age_request) \r",
+							"\r",
+							"// Спарсили age из ответа из json\r",
+							"let age_response = jsonData.person.u_age\r",
+							"console.log(age_response) \r",
+							"// СРАВНИВАЕМ\r",
+							"pm.test(\"age_check\", function () {\r",
+							"    pm.expect(age_request).to.eql(age_response);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Elena\",\r\n    \"age\": 30,\r\n    \"salary\": 2000,\r\n    \"auth_token\":\"{{token}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}:{{port}}/user_info",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user_info"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
