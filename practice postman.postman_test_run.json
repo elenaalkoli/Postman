@@ -1,0 +1,235 @@
+{
+	"id": "81a8dcf6-e707-4eeb-9d3b-e48f56a855ea",
+	"name": "practice postman",
+	"timestamp": "2022-10-17T10:15:10.510Z",
+	"collection_id": "0-10b41abb-6a2a-4f5e-90fa-1dcb2ccebd9d",
+	"folder_id": 0,
+	"environment_id": "ffcabf5d-2c66-4b4c-9c2e-a95ad9510ef2",
+	"totalPass": 7,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "af8662f4-7911-4bfc-b9ed-9d22b27f10b3",
+			"name": "200 OK",
+			"url": "http://162.55.220.72:5005/object_info_4?name=Elena&age=30&salary=2500",
+			"time": 115,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				115
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a567490c-ec2e-485e-b9ba-7fe8195b329b",
+			"name": "Permitted Methods",
+			"url": "http://162.55.220.72:5005/object_info_4?name=Elena&age=30&salary=2500",
+			"time": 114,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"All headers": true
+			},
+			"testPassFailCounts": {
+				"All headers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				114
+			],
+			"allTests": [
+				{
+					"All headers": true
+				}
+			]
+		},
+		{
+			"id": "ca2aeecd-6bd6-4541-b8b0-5aab879a04b0",
+			"name": "Response time",
+			"url": "http://162.55.220.72:5005/object_info_4?name=Elena&age=30&salary=2500",
+			"time": 99,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				99
+			],
+			"allTests": [
+				{
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "e38f39a3-913c-41fb-b413-c9d49af34f56",
+			"name": "Body check",
+			"url": "http://162.55.220.72:5005/object_info_4?name=Elena&age=30&salary=2500",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body check": true
+			},
+			"testPassFailCounts": {
+				"Body check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"Body check": true
+				}
+			]
+		},
+		{
+			"id": "dfc5659a-f55e-4d57-a6cf-eb861b6fa649",
+			"name": "Any keys check",
+			"url": "http://162.55.220.72:5005/object_info_4?name=Elena&age=30&salary=2500",
+			"time": 85,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Keys check": true
+			},
+			"testPassFailCounts": {
+				"Keys check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				85
+			],
+			"allTests": [
+				{
+					"Keys check": true
+				}
+			]
+		},
+		{
+			"id": "cd9acdc4-25e2-41b1-be19-2f96ac2522c2",
+			"name": "Response is not empty",
+			"url": "http://162.55.220.72:5005/object_info_4?name=Elena&age=30&salary=2500",
+			"time": 115,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Keys check": true
+			},
+			"testPassFailCounts": {
+				"Keys check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				115
+			],
+			"allTests": [
+				{
+					"Keys check": true
+				}
+			]
+		},
+		{
+			"id": "82bc4e0b-c0e6-4dd5-874c-6e399ea78e4c",
+			"name": "JSON check",
+			"url": "http://162.55.220.72:5005/user_info_2",
+			"time": 93,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Your test name": true
+			},
+			"testPassFailCounts": {
+				"Your test name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				93
+			],
+			"allTests": [
+				{
+					"Your test name": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 716,
+	"collection": {
+		"requests": [
+			{
+				"id": "af8662f4-7911-4bfc-b9ed-9d22b27f10b3",
+				"method": "GET"
+			},
+			{
+				"id": "a567490c-ec2e-485e-b9ba-7fe8195b329b",
+				"method": "OPTIONS"
+			},
+			{
+				"id": "ca2aeecd-6bd6-4541-b8b0-5aab879a04b0",
+				"method": "GET"
+			},
+			{
+				"id": "e38f39a3-913c-41fb-b413-c9d49af34f56",
+				"method": "GET"
+			},
+			{
+				"id": "dfc5659a-f55e-4d57-a6cf-eb861b6fa649",
+				"method": "GET"
+			},
+			{
+				"id": "cd9acdc4-25e2-41b1-be19-2f96ac2522c2",
+				"method": "GET"
+			},
+			{
+				"id": "82bc4e0b-c0e6-4dd5-874c-6e399ea78e4c",
+				"method": "POST"
+			}
+		]
+	}
+}
